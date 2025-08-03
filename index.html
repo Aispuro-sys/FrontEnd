@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Luis Eduardo Mejia Aispuro</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/icon.png">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <i class="fas fa-home me-2"></i>
+                <img src="images/logo.svg" alt="Logo" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <div class="typewriter">
+                        <h1 class="hero-title">Hola, soy <span class="text-primary">Eduardo Aispuro</span></h1>
+                    </div>
+                    <h2 class="hero-subtitle">Desarrollador Full Stack</h2>
+                    <p class="hero-description">Especializado en crear soluciones digitales robustas y escalables con código limpio y eficiente.</p>
+                    
+                    <div class="coding-animation mb-4">
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <div class="terminal-buttons">
+                                    <span class="terminal-btn red"></span>
+                                    <span class="terminal-btn yellow"></span>
+                                    <span class="terminal-btn green"></span>
+                                </div>
+                                <div class="terminal-title">bash</div>
+                            </div>
+                            <div class="terminal-body">
+                                <span class="terminal-prompt">$</span>
+                                <span class="terminal-command">git commit -m "Creando soluciones innovadoras"</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="contacto.html" class="btn btn-primary btn-lg me-3">Contáctame</a>
+                        <a href="proyectos.html" class="btn btn-outline-light btn-lg">Ver Proyectos</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="hero-image-container">
+                        <img src="../static/images/profile.jpg" alt="Foto de perfil" class="hero-image">
+                        <div class="hero-image-border"></div>
+                        <div class="tech-bubbles">
+                            <div class="bubble" style="top: 10%; left: 5%;"><img src="images/js-logo.png" alt="JavaScript"></div>
+                            <div class="bubble" style="top: 20%; right: 10%;"><img src="images/python-logo.png" alt="Python"></div>
+                            <div class="bubble" style="bottom: 15%; left: 15%;"><img src="images/logos/node-logo.png" alt="Node.js"></div>
+                            <div class="bubble" style="bottom: 25%; right: 5%;"><img src="images/logos/sql-logo.png" alt="SQL"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Sobre <span class="text-primary">Mí</span></h2>
+            <div class="row">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <p class="about-text">Soy un apasionado desarrollador con más de X años de experiencia en el desarrollo de software. Mi enfoque combina habilidades técnicas sólidas con una comprensión profunda de las necesidades del negocio para crear soluciones efectivas.</p>
+                    <p class="about-text">Me especializo en arquitecturas escalables, desarrollo ágil y buenas prácticas de codificación. Disfruto trabajando en equipo y compartiendo conocimientos para construir productos excepcionales.</p>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-user-tie me-2"></i>Nombre:</span>
+                            <span class="info-value">Luis Eduardo Mejia Aispuro</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-envelope me-2"></i>Email:</span>
+                            <span class="info-value">tuemail@ejemplo.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-briefcase me-2"></i>Experiencia:</span>
+                            <span class="info-value">X+ años</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label"><i class="fas fa-map-marker-alt me-2"></i>Ubicación:</span>
+                            <span class="info-value">Ciudad, País</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-icon" data-tooltip="GitHub"><img src="images/logos/github-logo.png" alt="GitHub"></a>
+                        <a href="#" class="social-icon" data-tooltip="LinkedIn"><img src="images/logos/linkedin-logo.png" alt="LinkedIn"></a>
+                        <a href="#" class="social-icon" data-tooltip="Twitter"><img src="images/logos/twitter-logo.png" alt="Twitter"></a>
+                        <a href="#" class="social-icon" data-tooltip="WhatsApp"><img src="images/logos/whatsapp-logo.png" alt="WhatsApp"></a>
+                        <a href="#" class="social-icon" data-tooltip="Telegram"><img src="images/logos/telegram-logo.png" alt="Telegram"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <img src="../static/images/logos/webdev-icon.png" alt="Desarrollo Web">
+                            </div>
+                            <h3 class="card-title">Desarrollo Web</h3>
+                            <p class="card-text">Creación de aplicaciones y sitios web responsivos, accesibles y optimizados para SEO.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <img src="../static/images/logos/mobile-icon.png" alt="Aplicaciones Móviles">
+                            </div>
+                            <h3 class="card-title">Aplicaciones Móviles</h3>
+                            <p class="card-text">Desarrollo de apps nativas e híbridas para iOS y Android con React Native y Flutter.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <img src="../static/images/logos/api-icon.png" alt="Backend & APIs">
+                            </div>
+                            <h3 class="card-title">Backend & APIs</h3>
+                            <p class="card-text">Diseño e implementación de APIs RESTful y GraphQL con Node.js, FastAPI y .NET.</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <img src="../static/images/logos/database-icon.png" alt="Bases de Datos">
+                            </div>
+                            <h3 class="card-title">Bases de Datos</h3>
+                            <p class="card-text">Modelado y optimización de bases de datos SQL y NoSQL para alto rendimiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Mis <span class="text-primary">Habilidades</span></h2>
+            
+            <div class="skills-container">
+                <div class="row">
+                    <div class="col-md-6 animate__animated animate__fadeInLeft">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3 class="skill-name">Frontend Development</h3>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3 class="skill-name">Backend Development</h3>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3 class="skill-name">Mobile Development</h3>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 animate__animated animate__fadeInRight">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3 class="skill-name">Database Design</h3>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3 class="skill-name">DevOps & Cloud</h3>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3 class="skill-name">UI/UX Design</h3>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-stack animate__animated animate__fadeInUp">
+                <h3 class="stack-title">Tecnologías que domino</h3>
+                <div class="stack-items">
+                    <!-- Lenguajes -->
+                    <div class="tech-icon" data-tooltip="JavaScript">
+                        <img src="images/js-logo.png" alt="JavaScript" class="tech-logo js-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="Python">
+                        <img src="images/python-logo.png" alt="Python" class="tech-logo python-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="Java">
+                        <img src="images/java-logo.png" alt="Java" class="tech-logo java-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="C#">
+                        <img src="images/csharp-logo.png" alt="C#" class="tech-logo csharp-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="HTML5">
+                        <img src="images/logos/html-logo.png" alt="HTML5" class="tech-logo html-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="CSS3">
+                        <img src="images/logos/css-logo.png" alt="CSS3" class="tech-logo css-color">
+                    </div>
+                    
+                    <!-- Frameworks y Plataformas -->
+                    <div class="tech-icon" data-tooltip="Node.js">
+                        <img src="images/logos/node-logo.png" alt="Node.js" class="tech-logo node-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="FastAPI">
+                        <img src="images/logos/fastapi-logo.png" alt="FastAPI" class="tech-logo fastapi-color">
+                    </div>
+                    
+                    <!-- Bases de Datos -->
+                    <div class="tech-icon" data-tooltip="SQL">
+                        <img src="images/logos/sql-logo.png" alt="SQL" class="tech-logo sql-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="MySQL">
+                        <img src="images/logos/mysql-logo.png" alt="MySQL" class="tech-logo mysql-color">
+                    </div>
+                    
+                    <!-- Herramientas -->
+                    <div class="tech-icon" data-tooltip="Git">
+                        <img src="images/logos/git-logo.png" alt="Git" class="tech-logo git-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="GitHub">
+                        <img src="images/logos/github-logo.png" alt="GitHub" class="tech-logo github-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="GitLab">
+                        <img src="images/logos/gitlab-logo.png" alt="GitLab" class="tech-logo gitlab-color">
+                    </div>
+                    
+                    <!-- Cisco -->
+                    <div class="tech-icon" data-tooltip="Cisco">
+                        <img src="images/logos/cisco-logo.png" alt="Cisco" class="tech-logo cisco-color">
+                    </div>
+                    
+                    <!-- Windows -->
+                    <div class="tech-icon" data-tooltip="Windows">
+                        <img src="images/logos/windows-logo.png" alt="Windows" class="tech-logo windows-color">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tools-section mt-5 animate__animated animate__fadeIn">
+                <h3 class="stack-title">Herramientas y Aplicaciones</h3>
+                <div class="stack-items">
+                    <!-- IDEs -->
+                    <div class="tech-icon" data-tooltip="VS Code">
+                        <img src="images/logos/vscode-logo.png" alt="VS Code" class="tech-logo vscode-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="Visual Studio">
+                        <img src="images/logos/vs-logo.png" alt="Visual Studio" class="tech-logo vs-color">
+                    </div>
+                    <div class="tech-icon" data-tooltip="NetBeans">
+                        <img src="images/logos/netbeans-logo.png" alt="NetBeans" class="tech-logo netbeans-color">
+                    </div>
+                    
+                    <!-- Bases de Datos -->
+                    <div class="tech-icon" data-tooltip="SQL Server">
+                        <img src="images/logos/sqlserver-logo.png" alt="SQL Server" class="tech-logo sqlserver-color">
+                    </div>
+                    
+                    <!-- Consolas -->
+                    <div class="tech-icon" data-tooltip="Command Prompt">
+                        <img src="images/logos/cmd-logo.png" alt="Command Prompt" class="tech-logo cmd-color">
+                    </div>
+                    
+                    <!-- Git -->
+                    <div class="tech-icon" data-tooltip="Git">
+                        <img src="images/logos/git-logo.png" alt="Git" class="tech-logo git-color">
+                    </div>
+                    
+                    <!-- Cursor -->
+                    <div class="tech-icon" data-tooltip="Cursor IDE">
+                        <img src="images/logos/cursor-logo.png" alt="Cursor IDE" class="tech-logo cursor-color">
+                    </div>
+                    
+                    <!-- Game Dev -->
+                    <div class="tech-icon" data-tooltip="Unity">
+                        <img src="images/logos/unity-logo.png" alt="Unity" class="tech-logo unity-color">
+                    </div>
+                    
+                    <!-- Cisco -->
+                    <div class="tech-icon" data-tooltip="Cisco">
+                        <img src="images/logos/cisco-logo.png" alt="Cisco" class="tech-logo cisco-color">
+                    </div>
+                    
+                    <!-- Arduino -->
+                    <div class="tech-icon" data-tooltip="Arduino">
+                        <img src="images/logos/arduino-logo.png" alt="Arduino" class="tech-logo arduino-color">
+                    </div>
+                    
+                    <!-- Rufus -->
+                    <div class="tech-icon" data-tooltip="Rufus">
+                        <img src="images/logos/rufus-logo.png" alt="Rufus" class="tech-logo rufus-color">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Mi <span class="text-primary">Experiencia</span></h2>
+            
+            <div class="timeline">
+                <div class="timeline-item animate__animated animate__fadeInUp">
+                    <div class="timeline-date">2021 - Presente</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Desarrollador Senior</h3>
+                        <h4 class="timeline-company">Empresa Tech Innovadora</h4>
+                        <p class="timeline-description">Lideré el desarrollo de aplicaciones web y móviles utilizando tecnologías modernas como React, Node.js y MongoDB. Implementé arquitecturas escalables y mejores prácticas de desarrollo.</p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate__animated animate__fadeInUp">
+                    <div class="timeline-date">2018 - 2021</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Desarrollador Full Stack</h3>
+                        <h4 class="timeline-company">Startup de Tecnología</h4>
+                        <p class="timeline-description">Desarrollé y mantuve aplicaciones web utilizando JavaScript, Python y Django. Colaboré con equipos multidisciplinarios para implementar nuevas funcionalidades.</p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item animate__animated animate__fadeInUp">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Desarrollador Junior</h3>
+                        <h4 class="timeline-company">Agencia Digital</h4>
+                        <p class="timeline-description">Participé en el desarrollo de sitios web y aplicaciones pequeñas. Adquirí experiencia en HTML, CSS, JavaScript y PHP mientras trabajaba bajo supervisión.</p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Mis <span class="text-primary">Proyectos</span></h2>
+            
+            <div class="projects-grid">
+                <div class="project-card animate__animated animate__fadeInUp">
+                    <div class="project-image">
+                        <img src="images/project-inventory.png" alt="Sistema de Gestión Web">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-title">Sistema de Gestión Web</div>
+                                <div class="overlay-description">Dashboard en tiempo real • Reportes automáticos • Gestión de usuarios</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status">
+                            <span class="status-badge live">Live</span>
+                        </div>
+                        <h3 class="project-title">Sistema de Gestión Web</h3>
+                        <p class="project-description">Aplicación web completa para gestión de inventarios y ventas con interfaz moderna y responsive. Incluye dashboard en tiempo real, reportes automáticos y gestión de usuarios.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag" data-tooltip="React - Biblioteca JavaScript para interfaces de usuario"><img src="images/logos/react-logo.png" alt="React">React</span>
+                            <span class="tech-tag" data-tooltip="Node.js - Runtime de JavaScript para el servidor"><img src="images/logos/node-logo.png" alt="Node.js">Node.js</span>
+                            <span class="tech-tag" data-tooltip="MongoDB - Base de datos NoSQL orientada a documentos"><img src="images/logos/mongodb-logo.png" alt="MongoDB">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="demos/calculator.html" class="btn btn-primary btn-sm" target="_blank">Ver Demo</a>
+                            <a href="https://github.com/eduardoaispuro/inventory-system" class="btn btn-outline-light btn-sm" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate__animated animate__fadeInUp">
+                    <div class="project-image">
+                        <img src="images/project-api.png" alt="API RESTful">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-title">API RESTful</div>
+                                <div class="overlay-description">JWT • Validación de datos • Testing automatizado</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status">
+                            <span class="status-badge demo">Demo</span>
+                        </div>
+                        <h3 class="project-title">API RESTful</h3>
+                        <p class="project-description">API completa para gestión de usuarios y autenticación con documentación automática. Incluye JWT, validación de datos y testing automatizado.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag" data-tooltip="FastAPI - Framework web moderno para APIs con Python"><img src="images/logos/fastapi-logo.png" alt="FastAPI">FastAPI</span>
+                            <span class="tech-tag" data-tooltip="Python - Lenguaje de programación versátil"><img src="images/python-logo.png" alt="Python">Python</span>
+                            <span class="tech-tag" data-tooltip="PostgreSQL - Base de datos relacional avanzada"><img src="images/logos/postgresql-logo.png" alt="PostgreSQL">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="demos/todo-app.html" class="btn btn-primary btn-sm" target="_blank">Ver Demo</a>
+                            <a href="https://github.com/eduardoaispuro/fastapi-auth" class="btn btn-outline-light btn-sm" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate__animated animate__fadeInUp">
+                    <div class="project-image">
+                        <img src="images/project-mobile.png" alt="App Móvil de Hábitos">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-title">App Móvil de Hábitos</div>
+                                <div class="overlay-description">Notificaciones • Estadísticas • Sincronización en la nube</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status">
+                            <span class="status-badge beta">Beta</span>
+                        </div>
+                        <h3 class="project-title">App Móvil de Hábitos</h3>
+                        <p class="project-description">Aplicación móvil para seguimiento de hábitos y productividad personal. Incluye notificaciones, estadísticas y sincronización en la nube.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag" data-tooltip="React Native - Framework para aplicaciones móviles"><img src="images/logos/react-native-logo.png" alt="React Native">React Native</span>
+                            <span class="tech-tag" data-tooltip="Firebase - Plataforma de desarrollo de Google"><img src="images/logos/firebase-logo.png" alt="Firebase">Firebase</span>
+                            <span class="tech-tag" data-tooltip="Redux - Gestor de estado para aplicaciones JavaScript"><img src="images/logos/redux-logo.png" alt="Redux">Redux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="demos/color-picker.html" class="btn btn-primary btn-sm" target="_blank">Ver Demo</a>
+                            <a href="https://github.com/eduardoaispuro/habits-mobile" class="btn btn-outline-light btn-sm" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate__animated animate__fadeInUp">
+                    <div class="project-image">
+                        <img src="images/project-ecommerce.png" alt="Tienda en Línea">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-title">Tienda en Línea</div>
+                                <div class="overlay-description">Carrito de compras • Pasarela de pagos • Panel de administración</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status">
+                            <span class="status-badge live">Live</span>
+                        </div>
+                        <h3 class="project-title">Tienda en Línea</h3>
+                        <p class="project-description">Plataforma de comercio electrónico completa con carrito de compras, pasarela de pagos y panel de administración.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag" data-tooltip="Vue.js - Framework progresivo para interfaces de usuario"><img src="images/logos/vue-logo.png" alt="Vue.js">Vue.js</span>
+                            <span class="tech-tag" data-tooltip="Laravel - Framework PHP elegante y expresivo"><img src="images/logos/laravel-logo.png" alt="Laravel">Laravel</span>
+                            <span class="tech-tag" data-tooltip="MySQL - Sistema de gestión de bases de datos relacional"><img src="images/logos/mysql-logo.png" alt="MySQL">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ecommerce-demo.netlify.app" class="btn btn-primary btn-sm" target="_blank">Ver Demo</a>
+                            <a href="https://github.com/eduardoaispuro/ecommerce-platform" class="btn btn-outline-light btn-sm" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate__animated animate__fadeInUp">
+                    <div class="project-image">
+                        <img src="images/project-dashboard.png" alt="Dashboard Analytics">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-title">Dashboard Analytics</div>
+                                <div class="overlay-description">Gráficos en tiempo real • Métricas de rendimiento • Reportes personalizables</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-status">
+                            <span class="status-badge demo">Demo</span>
+                        </div>
+                        <h3 class="project-title">Dashboard Analytics</h3>
+                        <p class="project-description">Panel de control interactivo con gráficos en tiempo real, métricas de rendimiento y reportes personalizables.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag" data-tooltip="Angular - Plataforma para aplicaciones web móviles"><img src="images/logos/angular-logo.png" alt="Angular">Angular</span>
+                            <span class="tech-tag" data-tooltip="D3.js - Biblioteca para visualización de datos"><img src="images/logos/d3-logo.png" alt="D3.js">D3.js</span>
+                            <span class="tech-tag" data-tooltip="Express - Framework web minimalista para Node.js"><img src="images/logos/express-logo.png" alt="Express">Express</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://dashboard-demo.vercel.app" class="btn btn-primary btn-sm" target="_blank">Ver Demo</a>
+                            <a href="https://github.com/eduardoaispuro/analytics-dashboard" class="btn btn-outline-light btn-sm" target="_blank">Código</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="proyectos.html" class="btn btn-primary btn-lg">Ver Todos los Proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coding Animation Section -->
+    <section class="code-showcase-section">
+        <div class="container">
+            <div class="code-showcase animate__animated animate__fadeIn">
+                <div class="code-tabs">
+                    <div class="code-tab active" data-tab="html">HTML</div>
+                    <div class="code-tab" data-tab="css">CSS</div>
+                    <div class="code-tab" data-tab="js">JavaScript</div>
+                    <div class="code-tab" data-tab="python">Python</div>
+                </div>
+                <div class="code-content active" id="html-code">
+                    <pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi Portafolio&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class="hero"&gt;
+        &lt;h1&gt;Hola, soy Luis Eduardo Mejia Aispuro&lt;/h1&gt;
+        &lt;p&gt;Desarrollador Full Stack&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;section id="about"&gt;
+            &lt;h2&gt;Sobre Mí&lt;/h2&gt;
+            &lt;p&gt;Texto descriptivo...&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
+                <div class="code-content" id="css-code">
+                    <pre><code class="language-css">
+.hero {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#about {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+                    </code></pre>
+                </div>
+                <div class="code-content" id="js-code">
+                    <pre><code class="language-javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    // Animación de escritura
+    const heroTitle = document.querySelector('.hero h1');
+    const text = heroTitle.textContent;
+    heroTitle.textContent = '';
+    
+    let i = 0;
+    const typingEffect = setInterval(() => {
+        if (i < text.length) {
+            heroTitle.textContent += text.charAt(i);
+            i++;
+        } else {
+            clearInterval(typingEffect);
+        }
+    }, 100);
+    
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+                    </code></pre>
+                </div>
+                <div class="code-content" id="python-code">
+                    <pre><code class="language-python">
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+class Item(BaseModel):
+    name: str
+    description: str = None
+    price: float
+    tax: float = None
+
+@app.post("/items/")
+async def create_item(item: Item):
+    item_dict = item.dict()
+    if item.tax:
+        price_with_tax = item.price + item.tax
+        item_dict.update({"price_with_tax": price_with_tax})
+    return item_dict
+
+@app.get("/")
+async def read_root():
+    return {"message": "Bienvenido a mi API"}
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="footer-title">Luis Eduardo Mejia Aispuro</h3>
+                    <p class="footer-text">Desarrollador Full Stack especializado en crear soluciones digitales innovadoras y eficientes.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-subtitle">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#about">Sobre mí</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#experience">Experiencia</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-subtitle">Contáctame</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope me-2"></i>tuemail@ejemplo.com</li>
+                        <li><i class="fas fa-phone me-2"></i>+123 456 7890</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Ciudad, País</li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><img src="images/logos/github-logo.png" alt="GitHub"></a>
+                        <a href="#" class="social-icon"><img src="images/logos/linkedin-logo.png" alt="LinkedIn"></a>
+                        <a href="#" class="social-icon"><img src="images/logos/twitter-logo.png" alt="Twitter"></a>
+                        <a href="#" class="social-icon"><img src="images/logos/whatsapp-logo.png" alt="WhatsApp"></a>
+                        <a href="#" class="social-icon"><img src="images/logos/telegram-logo.png" alt="Telegram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Eduardo Aispuro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="main.js"></script>
+</body>
+</html>

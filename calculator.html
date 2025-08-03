@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Demo Funcional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 320px;
+        }
+
+        .display {
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            text-align: right;
+            font-size: 2rem;
+            font-weight: 300;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .operator {
+            background: rgba(255, 193, 7, 0.3);
+            color: #ffc107;
+        }
+
+        .equals {
+            background: rgba(40, 167, 69, 0.3);
+            color: #28a745;
+            grid-column: span 2;
+        }
+
+        .clear {
+            background: rgba(220, 53, 69, 0.3);
+            color: #dc3545;
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+            <a href="index.html" class="back-btn">← Volver al Portafolio</a>
+    
+    <div class="calculator">
+        <div class="title">Calculadora</div>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">⌫</button>
+            <button class="operator" onclick="appendOperator('%')">%</button>
+            <button class="operator" onclick="appendOperator('/')">÷</button>
+            
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="appendOperator('*')">×</button>
+            
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendOperator('-')">−</button>
+            
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+            
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendNumber('.')">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let displayValue = '0';
+        let previousValue = null;
+        let operation = null;
+        let waitingForSecondOperand = false;
+
+        const display = document.getElementById('display');
+
+        function updateDisplay() {
+            display.textContent = displayValue;
+        }
+
+        function appendNumber(number) {
+            if (waitingForSecondOperand) {
+                displayValue = number;
+                waitingForSecondOperand = false;
+            } else {
+                displayValue = displayValue === '0' ? number : displayValue + number;
+            }
+            updateDisplay();
+        }
+
+        function appendOperator(operator) {
+            const inputValue = parseFloat(displayValue);
+
+            if (previousValue === null) {
+                previousValue = inputValue;
+            } else if (operation) {
+                const result = calculate();
+                displayValue = String(result);
+                previousValue = result;
+            }
+
+            waitingForSecondOperand = true;
+            operation = operator;
+            updateDisplay();
+        }
+
+        function calculate() {
+            const inputValue = parseFloat(displayValue);
+
+            if (previousValue === null || operation === null) {
+                return inputValue;
+            }
+
+            let result;
+            switch (operation) {
+                case '+':
+                    result = previousValue + inputValue;
+                    break;
+                case '-':
+                    result = previousValue - inputValue;
+                    break;
+                case '*':
+                    result = previousValue * inputValue;
+                    break;
+                case '/':
+                    result = previousValue / inputValue;
+                    break;
+                case '%':
+                    result = previousValue % inputValue;
+                    break;
+                default:
+                    return inputValue;
+            }
+
+            displayValue = String(result);
+            operation = null;
+            previousValue = null;
+            updateDisplay();
+            return result;
+        }
+
+        function clearDisplay() {
+            displayValue = '0';
+            previousValue = null;
+            operation = null;
+            waitingForSecondOperand = false;
+            updateDisplay();
+        }
+
+        function deleteLast() {
+            if (displayValue.length === 1) {
+                displayValue = '0';
+            } else {
+                displayValue = displayValue.slice(0, -1);
+            }
+            updateDisplay();
+        }
+
+        // Keyboard support
+        document.addEventListener('keydown', (event) => {
+            const key = event.key;
+            
+            if (key >= '0' && key <= '9' || key === '.') {
+                appendNumber(key);
+            } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+                appendOperator(key);
+            } else if (key === 'Enter' || key === '=') {
+                calculate();
+            } else if (key === 'Escape') {
+                clearDisplay();
+            } else if (key === 'Backspace') {
+                deleteLast();
+            }
+        });
+    </script>
+</body>
+</html> 
